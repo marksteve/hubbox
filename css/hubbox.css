@@ -1,0 +1,98 @@
+body {
+  font-family: Oxygen;
+  color: #333;
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  margin-right: 0.5em;
+}
+
+.user {
+  margin-bottom: 20px;
+  letter-spacing: -0.05em;
+}
+
+.user > div {
+  display: inline-block;
+}
+
+.user > div  > span {
+  margin-right: 2em;
+}
+
+.user-name {
+  font-size: 150%;
+  font-weight: 300;
+  width: 25%;
+}
+
+.user-name a {
+  text-decoration: none;
+}
+
+.user-name img {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.user-info {
+  width: 75%;
+}
+
+.repo {
+  padding: 20px;
+  background: white;
+  border-top: 5px silver solid;
+  margin-bottom: 10px;
+  width: 300px;
+  position: relative;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.repo h3 {
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.repo h3 a {
+  text-decoration: none;
+}
+
+.repo-lang {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 24px;
+}
+
+.lang-c {
+  border-color: #555;
+}
+
+.lang-python {
+  border-color: #3581ba;
+}
+
+.lang-javascript {
+  border-color: #f7df1e;
+}
+
+.lang-go {
+  border-color: #375eab;
+}
+
+.lang-css {
+  border-color: #563d7c;
+}
