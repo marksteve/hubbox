@@ -13,23 +13,23 @@ var User = React.createClass({
         </div>
         <div className="user-info">
           <span className="user-followers">
-            <i className="icon ion-person-stalker" />
+            <span className="oi" data-glyph="people"></span>
             {user.followers} followers
           </span>
           <span className="user-following">
-            <i className="icon ion-person-stalker" />
+            <span className="oi" data-glyph="people"></span>
             {user.following} following
           </span>
           <span className="user-company">
-            <i className="icon ion-briefcase" />
+            <span className="oi" data-glyph="briefcase"></span>
             {user.company}
           </span>
           <span className="user-location">
-            <i className="icon ion-location" />
+            <span className="oi" data-glyph="location"></span>
             {user.location}
           </span>
           <span className="user-blog">
-            <i className="icon ion-link" />
+            <span className="oi" data-glyph="link-intact"></span>
             <a href={user.blog}>{user.blog}</a>
           </span>
         </div>
@@ -46,7 +46,9 @@ var Repo = React.createClass({
     };
     classes["lang-" + (repo.language || "unknown").toLowerCase()] = true;
     var className = React.addons.classSet(classes);
-    var fork = repo.fork ? <i className="icon ion-fork-repo" /> : "";
+    var fork = repo.fork ? (
+      <span className="oi" data-glyph="fork"></span>
+    ) : "";
     return (
       <div className={className}>
         <h3>
@@ -54,6 +56,24 @@ var Repo = React.createClass({
         </h3>
         <small className="repo-lang">{repo.language || ""}</small>
         <p className="repo-desc">{repo.description}</p>
+        <div className="repo-stats">
+          <small>
+            <span className="oi" data-glyph="star"></span>
+            {repo.stargazers_count}
+          </small>
+          <small>
+            <span className="oi" data-glyph="eye"></span>
+            {repo.watchers_count}
+          </small>
+          <small>
+            <span className="oi" data-glyph="fork"></span>
+            {repo.forks_count}
+          </small>
+          <small>
+            <span className="oi" data-glyph="warning"></span>
+            {repo.open_issues_count}
+          </small>
+        </div>
       </div>
     );
   }
